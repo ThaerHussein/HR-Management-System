@@ -12,10 +12,17 @@ const pg = require('pg')
 const axios = require('axios');
 require('dotenv').config();
 
+
 //server open for all clients requests
 server.use(cors());
 server.use(express.json())
-const client = new pg.Client('postgresql://dpg-cokbh9n79t8c73c6n4e0-a:5432/recipes_r8t5')
+
+const DataBase= process.env.PG_DATABASE
+const UserName= process.env.PG_USER
+const password= process.env.PG_PASSWORD
+const Host = process.env.PG_HOST
+const Port= process.env.PG_PORT
+const client = new pg.Client(`postgresql://${Username}:${password}@${Host}:${PORT}/${DataBase}`)
 const PORT = 8080;
 
 //constructor
