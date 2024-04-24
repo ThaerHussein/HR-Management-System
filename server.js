@@ -15,7 +15,7 @@ require('dotenv').config();
 //server open for all clients requests
 server.use(cors());
 server.use(express.json())
-const client = new pg.Client('postgresql://localhost:5432/recipes2')
+const client = new pg.Client('postgresql://dpg-cokbh9n79t8c73c6n4e0-a:5432/recipes_r8t5')
 const PORT = 8080;
 
 //constructor
