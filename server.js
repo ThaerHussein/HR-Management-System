@@ -22,7 +22,7 @@ const UserName= process.env.PG_USER
 const password= process.env.PG_PASSWORD
 const Host = process.env.PG_HOST
 const Port= process.env.PG_PORT
-const client = new pg.Client(`postgresql://${Username}:${password}@${Host}:${PORT}/${DataBase}`)
+const client = new pg.Client(`postgresql://${UserName}:${password}@${Host}:${PORT}/${DataBase}`)
 const PORT = 8080;
 
 //constructor
